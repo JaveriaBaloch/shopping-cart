@@ -46,8 +46,9 @@ export default (state = initailState, action)=>{
             console.log("payload",action.payload)
             productSelected = {...state.products[action.payload]}
             console.log("productSelected",productSelected)
-             if(productSelected.number>=0)
+             if(productSelected.number>1)
             {
+               
                 productSelected.number -=1
                 productSelected.inCart = true
             }else{
@@ -55,9 +56,8 @@ export default (state = initailState, action)=>{
                 
                 
             }
-          if(productSelected.number>0){
            return{
-   
+            
             cartCost : state.cartCost - state.products[action.payload].price,
             products:{
              ...state.products,
@@ -65,7 +65,6 @@ export default (state = initailState, action)=>{
             },
             basketNumbers : state.basketNumbers-1
            }
-        }
         case REMOVE_ITEM:
             // productSelected= productSelected[action.payload]
             if(state.basketNumbers>=1){
