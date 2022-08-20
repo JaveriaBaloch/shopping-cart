@@ -36,7 +36,7 @@ function Navbar(props){
   </nav>
   <div>
   <div className="holder ms-5">
-      <h2>Shop in you way!</h2>
+      <h2>Shop in your way!</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </p>
   </div>
 </div>
